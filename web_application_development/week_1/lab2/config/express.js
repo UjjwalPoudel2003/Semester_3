@@ -25,6 +25,7 @@ module.exports = () => {
 
     app.set('views', './app/views');
     app.set('view engine', 'ejs');
+    app.use('/', require('../app/routes/index.server.routes.js'));
 
     app.use(express.static('./node_modules'));
 
