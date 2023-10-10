@@ -2,22 +2,22 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const tasky = new Schema({
-    todo_description: {
+const Tasky = new Schema({
+    tasky_description: {
         type: String
     },
 
-    todo_responsible: {
+    tasky_responsible: {
         type: String
     },
 
-    todo_priority: {
+    tasky_priority: {
         type: String
     },
 
-    todo_completed: {
+    tasky_completed: {
         type: Boolean
     }
 });
 
-module.exports = mongoose.model('tasky', tasky);
+module.exports = mongoose.model('Tasky', Tasky);
