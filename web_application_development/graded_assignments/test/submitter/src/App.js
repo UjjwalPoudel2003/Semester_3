@@ -1,20 +1,31 @@
 import React from "react";
-import { BrowserRouter as Link, Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom";
 import Product from "./components/product.js";
-import Shop from "./components/shop.component";
+import Shop from "./components/shop.js";
 
 function App() {
   return (
+    <div>
     <Router>
-        <nav className="navigation">
-          <Link to={'/'} className="navigation__link">New Shop</Link>
-          <Link to={'/product'} className="navigation__link">New Product</Link>
-        </nav>
-      <Routes>
-        <Route path='/' element={<Shop />} />
-        <Route path='/product' element={<Product />} />
-      </Routes>
-    </Router>
+        <ul>
+          <li>
+            <Link to="/">New Shop</Link>
+          </li>
+          <li>
+            <Link to="/product">New Product</Link>
+          </li>
+        </ul>
+        <Routes>
+          <Route exact path="/" component={Shop} />
+          <Route exact path="/product" component={Product} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-function Shop() {
+const Shop = () => {
     const [file, setFile] = useState(null);
-    const[name, setName] = useState('');
-    const[description, setDescription] = useState('');
+    const[name, setName] = useState('Your name here');
+    const[description, setDescription] = useState('Your description here');
 
     const handleFile = (event) => {
         const selectedFile = event.target.files[0];
@@ -21,7 +21,7 @@ function Shop() {
     }
 
     return (
-        <>
+        <div>
             <h1>New Shop</h1>
             <div className="upload">
                 <label>File Upload</label>
@@ -39,7 +39,7 @@ function Shop() {
                     <input type="text" value={description} onChange={handledescription}/>
                 </div>
             </div>
-        </>
+        </div>
     ) 
 }
 

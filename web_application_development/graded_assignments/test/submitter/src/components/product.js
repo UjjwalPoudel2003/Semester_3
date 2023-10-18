@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-function Product() {
-    const [file, setFile] = useState(null);
+const Product = () => {
+    const[file, setFile] = useState(null);
     const[name, setName] = useState('your name here');
     const[description, setDescription] = useState("Your description here");
     const[category, setCategory] = useState('Your category here');
@@ -14,7 +14,7 @@ function Product() {
     }
 
     const handleName = (event) => {
-        const newName = event.target.value;f
+        const newName = event.target.value;
         setName(newName);
     }
 
@@ -39,7 +39,7 @@ function Product() {
     }
 
     return (
-        <>
+        <div>
             <h1>New Shop</h1>
             <div className="upload">
                 <label>Upload LOGO</label>
@@ -72,7 +72,7 @@ function Product() {
                     <input type="text" value={price} onChange={handlePrice}/>
                 </div>
             </div>
-        </>
+        </div>
     ) 
 }
 
