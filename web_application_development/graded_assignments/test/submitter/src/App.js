@@ -21,8 +21,8 @@ function App() {
           </li>
         </ul>
         <Routes>
-          <Route exact path="/" component={Shop} />
-          <Route exact path="/product" component={Product} />
+          <Route exact path="/" component={< Shop />} />
+          <Route exact path="/product" component={< Product />} />
         </Routes>
       </Router>
     </div>

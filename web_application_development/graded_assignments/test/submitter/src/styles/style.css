@@ -1,0 +1,18 @@
+div {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-footer {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}

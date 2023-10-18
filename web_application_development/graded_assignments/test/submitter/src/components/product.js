@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../styles/style.css'
 
 const Product = () => {
     const[file, setFile] = useState(null);
@@ -39,7 +40,7 @@ const Product = () => {
     }
 
     return (
-        <div>
+        <div className="form-body">
             <h1>New Shop</h1>
             <div className="upload">
                 <label>Upload LOGO</label>
@@ -71,6 +72,11 @@ const Product = () => {
                     <label>Price: </label>
                     <input type="text" value={price} onChange={handlePrice}/>
                 </div>
+            </div>
+
+            <div className="form-footer">
+                <button>SUBMIT</button>
+                <button>CANCEL</button>
             </div>
         </div>
     ) 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../styles/style.css';
 
 const Shop = () => {
     const [file, setFile] = useState(null);
@@ -21,7 +22,7 @@ const Shop = () => {
     }
 
     return (
-        <div>
+        <div className="form-body">
             <h1>New Shop</h1>
             <div className="upload">
                 <label>File Upload</label>
@@ -38,6 +39,11 @@ const Shop = () => {
                     <label>description: </label>
                     <input type="text" value={description} onChange={handledescription}/>
                 </div>
+            </div>
+
+            <div className="form-footer">
+                <button>SUBMIT</button>
+                <button>CANCEL</button>
             </div>
         </div>
     ) 
