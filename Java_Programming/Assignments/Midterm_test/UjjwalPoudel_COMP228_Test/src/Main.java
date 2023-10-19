@@ -19,7 +19,7 @@ public class Main {
         firstScienceBook.setYear(year);
 
         // Getting the price and genre of the first science book
-        double firstSciencePrice = firstScienceBook.price;
+        double firstSciencePrice = firstScienceBook.getPrice();
         String firstScienceGenre = firstScienceBook.getGenre();
 
         // Creating the objects of children book and setting the information
@@ -31,7 +31,7 @@ public class Main {
         firstChildrenBook.setYear(year);
 
         // Getting the price and genre of the first children book
-        double firstChildrenPrice = firstChildrenBook.price;
+        double firstChildrenPrice = firstChildrenBook.getPrice();
         String firstChildrenGenre = firstChildrenBook.getGenre();
 
         // Setting information to display

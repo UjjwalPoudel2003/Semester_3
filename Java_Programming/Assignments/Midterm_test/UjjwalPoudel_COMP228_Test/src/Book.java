@@ -1,11 +1,11 @@
 // Creating abstract class Book
 abstract class Book {
     // Instance variables for Book class
-    public String title;
-    public String ISBN;
-    public String publisher;
-    public double price;
-    public int year;
+    private String title;
+    private String ISBN;
+    private String publisher;
+    protected double price;
+    private int year;
 
     // Default constructor without parameters
     public Book() {
@@ -56,11 +56,15 @@ abstract class Book {
         this.year = year;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
     // Creating abstract method for setting price
-    abstract void setPrice(double price);
+    public abstract void setPrice(double price);
 
     // Creating abstract method for getting genre
-    abstract String getGenre();
+    public abstract String getGenre();
 
     // Override to string method
     @Override
