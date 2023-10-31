@@ -21,12 +21,19 @@ const Shop = () => {
         setDescription(newDescription);
     }
 
+    const setToNull = () => {
+        setName(null);
+        setDescription(null);
+        setFile(null);
+        window.location.reload();
+    }
+
     return (
         <div className="form-body">
             <h1>New Shop</h1>
             <div className="upload">
                 <label>File Upload</label>
-                <input type="file" value={file} onChange={handleFile} />
+                <input type="file" name="filename"></input>
             </div>
 
             <div className="details">
@@ -42,8 +49,8 @@ const Shop = () => {
             </div>
 
             <div className="form-footer">
-                <button>SUBMIT</button>
-                <button>CANCEL</button>
+                <button type="reset" onClick={setToNull}>SUBMIT</button>
+                <button type="reset" onClick={setToNull}>CANCEL</button>
             </div>
         </div>
     ) 
